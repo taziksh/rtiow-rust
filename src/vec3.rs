@@ -15,7 +15,7 @@ impl Vec3 {
     pub fn z(&self) -> f64 { self.e[2] }
 
     pub fn length(&self) -> f64 {
-        (self.e[0].powi(2) + self.e[1].powi(2) + self.e[2].powi(2)).sqrt()
+        self.dot(self).sqrt()
     }
 
     pub fn unit_vector(&self) -> Vec3 {
